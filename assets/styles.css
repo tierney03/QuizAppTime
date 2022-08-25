@@ -21,12 +21,25 @@ body {
     background-color: hsl(var(--hue-neutral), 100%, 20%);
 }
 
-body.correct {
-    --hue: var(var(--hue-correct));
+.both {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-body.wrong {
-    --hue: var(--hue-wrong);
+p {
+    width: 100px;
+    height: 100px;
+    background-color: lavender;
+    border-radius: 5px;
+    color: black;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 }
 
 .container {
@@ -36,6 +49,13 @@ body.wrong {
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+}
+
+#question {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .button-grid {
@@ -79,7 +99,7 @@ body.wrong {
     justify-content: center;
     align-items: center;
 }
-
+/* 
 .hide {
     display: none;
-}
+} */
