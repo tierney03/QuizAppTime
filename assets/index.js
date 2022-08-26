@@ -4,6 +4,12 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
+const startingMinutes = 5;
+
+let time = startingMinute = 60;
+const countdownEl = document.getElementById('countdown')
+setInterval(updateCountdown, 1000);
+
 let currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
@@ -11,6 +17,16 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 })
+
+function updateCountdown() {
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    countdownEl.innerHTML = '$(minutes): $(seconds)';
+    time--;
+}
 
 function startGame() {
     console.log('Started')
