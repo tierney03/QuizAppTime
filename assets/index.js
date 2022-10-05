@@ -6,7 +6,7 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 
 const startingMinutes = 5;
 
-let time = startingMinute = 60;
+let time = startingMinute = 300;
 const countdownEl = document.getElementById('countdown')
 setInterval(updateCountdown, 1000);
 
@@ -37,7 +37,7 @@ function startGame() {
 }
 
 function setNextQuestion() {
-    showQuestion()
+    showQuestion(question)
 }
 
 function showQuestion(question) {
